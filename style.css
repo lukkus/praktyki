@@ -1,6 +1,7 @@
 body {
     background-color: #d6d6d6;
     font-family: Arial, Helvetica, sans-serif;
+    margin:0%;
 }
 
 #navBar, #footer {
@@ -27,7 +28,7 @@ table {
     margin-right: 15%;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    height: 725px;
+    height: 744px;
 }
 
 a {
