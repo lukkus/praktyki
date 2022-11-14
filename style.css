@@ -1,34 +1,45 @@
 body {
-    background-color: #d6d6d6;
+    background-color: #D6D6D6;
+    margin: 0 auto;
+    height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    margin:0%;
 }
 
-#navBar, #footer {
+.navBar, .footer {
     background-color: #0d6efd;
     color: white;
+    height: 7.5%;
 }
 
-table {
-    padding: 0.8%;
+.navBar{
+    line-height: 4;
+}
+.navTabela{
+    text-align: center;
     width: 35%;
-    text-align: center;
 }
 
-#footer {
-    text-align: center;
-    padding: 0.5%;
+.main{
+    height: 85%;
 }
 
-#main {
-    border-radius: 10px;
+.content {
     background-color: white;
-    padding: 1%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
-    height: 744px;
+    border-radius: 20px;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 75%;
+    padding-left: 1%;
+}
+
+.footer {
+    text-align: center;
+    line-height: 4.5;
 }
 
 a {
