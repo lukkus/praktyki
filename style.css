@@ -8,19 +8,19 @@ body {
 .navBar, .footer {
     background-color: #0d6efd;
     color: white;
-    height: 7.5%;
+    height: 5%;
 }
 
-.navBar{
-    line-height: 4;
+.navBar {
+    line-height: 2.75;
 }
-.navTabela{
+.navLinki {
     text-align: center;
     width: 35%;
 }
 
-.main{
-    height: 85%;
+.main { 
+    height: 90%;
 }
 
 .content {
@@ -28,7 +28,7 @@ body {
     border-radius: 20px;
     position: absolute;
     margin: auto;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -39,7 +39,7 @@ body {
 
 .footer {
     text-align: center;
-    line-height: 4.5;
+    line-height: 3;
 }
 
 a {
