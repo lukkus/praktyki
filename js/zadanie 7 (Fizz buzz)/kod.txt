@@ -1,0 +1,25 @@
+function fizzbuzz(n)
+{
+  var lista = [];
+  for (let i = 1; i <= n; i++)
+  {
+    let num = "";
+    if(i % 15 == 0){
+      num = "FizzBuzz"
+      lista.push(num);
+    } 
+    else if (i % 5 == 0) {
+      num = "Buzz"
+      lista.push(num);
+    } 
+    else if (i % 3 == 0){
+      num = "Fizz"
+      lista.push(num);
+    } 
+    else {
+      num = i;
+      lista.push(i);
+    }
+  }
+    return lista;
+}
