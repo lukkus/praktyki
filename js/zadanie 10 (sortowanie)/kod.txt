@@ -1,0 +1,4 @@
+function descendingOrder(n){
+  var string = n.toString().split("").sort().reverse().join("");
+  return parseInt(string);
+}

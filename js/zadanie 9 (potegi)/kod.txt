@@ -1,0 +1,8 @@
+function squareDigits(num){
+  var num = num.toString();
+  var square = "";
+  for (var i = 0; i <=num.length; i++) {
+    square += num[i] * num[i]
+  }
+  return parseInt(square)
+}
