@@ -1,0 +1,10 @@
+function solution(a) {
+  let i = 0;
+   let jumps = 0;  
+   while (i >= 0 && i < a.length) {
+     i += a[i];
+    jumps++;
+    if (jumps > a.length) return -1;
+  }
+   return jumps;
+}

@@ -1,0 +1,78 @@
+function wallpaper(l, w, h) {
+    if(l == 0){
+      return "zero";
+    } else if (w == 0) {
+      return "zero"
+    } else if (h == 0) {
+      return "zero"
+    }
+    let pRolki = 5.2;
+    let pScany = l * h * 2 + w * h * 2;
+    let iloscRolek = Math.ceil((pScany / pRolki) * 1.15)
+    switch(iloscRolek){
+      case 1:
+      iloscRolek = "one";
+      break;
+      case 2:
+      iloscRolek = "two";
+      break;
+      case 3:
+      iloscRolek = "three";
+      break;
+      case 4:
+      iloscRolek = "four";
+      break;
+      case 5:
+      iloscRolek = "five";
+      break;
+      case 6:
+      iloscRolek = "six";
+      break;
+      case 7:
+      iloscRolek = "seven";
+      break;
+      case 8:
+      iloscRolek = "eight";
+      break;
+      case 9:
+      iloscRolek = "nine";
+      break;
+      case 10:
+      iloscRolek = "ten";
+      break;
+      case 11:
+      iloscRolek = "eleven";
+      break;
+      case 12:
+      iloscRolek = "twelve";
+      break;
+      case 13:
+      iloscRolek = "thirteen";
+      break;
+      case 14:
+      iloscRolek = "fourteen";
+      break;
+      case 15:
+      iloscRolek = "fifteen";
+      break;
+      case 16:
+      iloscRolek = "sixteen";
+      break;
+      case 17:
+      iloscRolek = "seventeen";
+      break;
+      case 18:
+      iloscRolek = "eighteen";
+      break;
+      case 19:
+      iloscRolek = "nineteen";
+      break;
+      case 20:
+      iloscRolek = "twenty";
+      break;
+}
+    return iloscRolek;
+}
+
+
+https://www.codewars.com/kata/567501aec64b81e252000003/train/javascript

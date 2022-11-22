@@ -1,0 +1,16 @@
+function getCount(str) {
+  let samogloski = 0;
+  for (length in str){
+    switch (str[length]){
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+    samogloski++;
+    break;
+    }
+  }
+  return samogloski;
+}
+  

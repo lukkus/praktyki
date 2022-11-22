@@ -1,0 +1,6 @@
+function highAndLow(numbers){
+  numbers = numbers.split(" ");
+  const high = Math.max(...numbers);
+  const low = Math.min(...numbers);
+  return high + " " + low;
+}

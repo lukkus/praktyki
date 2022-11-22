@@ -1,0 +1,12 @@
+function blackOrWhiteKey(keyPressCount) {
+    switch ((keyPressCount - 1) % 88 % 12) {
+        case 1:
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+          return "black";
+        default:
+          return "white";
+    }
+}
