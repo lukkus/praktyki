@@ -110,11 +110,7 @@ a {
 }
 
 #weight, #height {
-    height: 10%;
-}
-
-.inputsHeight {
-    height: 30%;
+    height: 25px;
 }
 
 #calculate2 {
