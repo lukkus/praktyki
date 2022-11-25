@@ -1,40 +1,63 @@
 document.getElementById("contentBMI").style.display = 'none';
 document.getElementById("rightContentBMI").style.display = 'none';
 
-function submitBMI() {
-    resoultBMI()
-    showResultBMI()
+function calculateResult() {
+    if (getWeight() == 0 || getHeight() == 0) {
+        const button = document.getElementById("calculate");
+        button.style.backgroundColor="#D6D6D6";
+    } else {
+        activateCalculateButton();
+        resultBMI();
+        displayResults(BMI, description);
+    }
+} 
+
+function resultBMI() {
+    let BMI = calculateBMI();
+    let description = getDescriptionBMI(BMI);
+    displayResults(BMI, description);
+}
+
+function calculateBMI() {
+    let weight = getWeight();
+    let height = getHeight();
+    return ((weight / (height * height))*10000).toFixed(2);
 }
 
 
-function resoultBMI() {
-    let weight = Number(document.getElementById("weight").value);
-    let height = Number(document.getElementById("height").value);
-    let BMI = ((weight / (height * height))*10000).toFixed(2);
+function getWeight() {
+    return Number(document.getElementById("inputWeight").value);
+}
+
+function getHeight() {
+    return Number(document.getElementById("inputHeight").value);
+}
+
+
+function displayResults(BMI, description) {
     document.getElementById("numberBMI").innerHTML = BMI;
+    document.getElementById("textBMI").innerHTML = description;
+    showResultBMI();
+}
+
+function getDescriptionBMI(BMI) {
     if (BMI < 16) {
-        document.getElementById("textBMI").innerHTML = "Wygłodzenie";
+        return "Wygłodzenie";
     } else if (BMI < 17) {
-        document.getElementById("textBMI").innerHTML = "Wychudzenie";
+        return "Wychudzenie";
     } else if (BMI < 18.5) {
-        document.getElementById("textBMI").innerHTML = "Niedowaga";
+        return "Niedowaga";
     } else if (BMI < 25) {
-        document.getElementById("textBMI").innerHTML = "Optimum";
+        return "Optimum";
     } else if (BMI < 30) {
-        document.getElementById("textBMI").innerHTML = "Nadwaga";
+        return "Nadwaga";
     } else if (BMI < 35) {
-        document.getElementById("textBMI").innerHTML = "Otyłość I st.";
+        return "Otyłość I st.";
     } else if (BMI < 40) {
-        document.getElementById("textBMI").innerHTML = "Otyłość II st.";
+        return "Otyłość II st.";
     } else if (BMI >= 40) {
-        document.getElementById("textBMI").innerHTML = "Otyłość III st.";
+        return "Otyłość III st.";
     }
-    if (weight == 0 || height == 0) {
-        const button = document.getElementById("calculate");
-        button.style.backgroundColor="#D6D6D6"
-        const element = document.getElementById("rightContentBMI");
-        element.style.display = "none";
-    } 
 }
 
 function showPageBMI() {
@@ -47,11 +70,24 @@ function showResultBMI() {
     element.style.display = "block";
 }
 
-function hideResultBMI() {
+function resetCalculation() {
+    hideResult();
+    resetInputs();
+    activateCalculateButton();
+}
+
+function hideResult() {
     const element = document.getElementById("rightContentBMI");
     element.style.display = "none";
-    document.getElementById("weight").value = "0";
-    document.getElementById("height").value = "0";
-    const button = document.getElementById("calculate");
-    button.style.backgroundColor="#0d6efd"
 }
+
+function resetInputs() {
+    document.getElementById("inputWeight").value = 0;
+    document.getElementById("inputHeight").value = 0;
+}
+
+function activateCalculateButton() {
+    const button = document.getElementById("calculate");
+    button.style.backgroundColor="#0d6efd";
+}
+
