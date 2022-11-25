@@ -7,12 +7,11 @@ function calculateResult() {
         button.style.backgroundColor="#D6D6D6";
     } else {
         activateCalculateButton();
-        resultBMI();
-        displayResults(BMI, description);
+        calculateBMIResult();
     }
 } 
 
-function resultBMI() {
+function calculateBMIResult() {
     let BMI = calculateBMI();
     let description = getDescriptionBMI(BMI);
     displayResults(BMI, description);
