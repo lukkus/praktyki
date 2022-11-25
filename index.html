@@ -9,21 +9,52 @@
         <div class="navBar">
             <table class="navLinki">
                 <tr>
-                    <td><a href="">Kalkulator</a></td>
-                    <td><a href="">Kalkulator BMI</a></td>
-                    <td><a href="">Konwerter walut</a></td>
-                    <td><a href="">Lotto</a></td>
-                    <td><a href="">Zgadnij liczbę</a></td>
+                    <td><a href="#">Kalkulator</a></td>
+                    <td><a href="#" onclick="showPageBMI()">Kalkulator BMI</a></td>
+                    <td><a href="#">Konwerter walut</a></td>
+                    <td><a href="#">Lotto</a></td>
+                    <td><a href="#">Zgadnij liczbę</a></td>
                 </tr>
             </table>
         </div>
-        <div class="main">
-           <div class="content">
+        <div class="main" id="contentMain">
+            <div class="content">
                 <h2>Hello Michał!</h2>
+            </div>
+            <div class="content" id="contentBMI">
+                <h2>Kalkulator BMI</h2>
+                <div class="leftContentBMI">
+                    <table class="leftBMI">
+                        <tr>
+                            <td colspan="3">Oblicz swój wskaźnik <b>BMI</b></td>
+                        </tr>
+                        <tr>
+                            <td class="leftTableBMI">Waga:</td>
+                            <td><input type="number" id="inputWeight"></td>
+                            <td>kg</td>
+                        </tr>
+                        <tr>
+                            <td class="leftTableBMI">Wzrost:</td>
+                            <td><input type="number" id="inputHeight"></td>
+                            <td>cm</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><input type="button" value="Resetuj" class="reset" onclick="resetCalculation()"><input type="button" value="Oblicz" id="calculate" onclick="calculateResult()"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="rightContentBMI">
+                    <p style="font-size: 30px">Twój wskaźnik masy ciała wynosi:</p>
+                    <p id="numberBMI"></p>
+                    <br><p style="font-size: 25px">Twoje BMI wskazuje na:</p>
+                    <h4 id="textBMI"></h4>
+                </div>
             </div>
         </div>
         <div class="footer">
             <b>@2022 Michał Kuś</b>
         </div>
+
+        <script src="scriptsBMI.js"></script>
     </body>
 </html>
