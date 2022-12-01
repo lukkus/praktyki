@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Praktyki - Michał</title>
+        <title>(TEST)Praktyki - Michał</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -11,7 +11,7 @@
                 <tr>
                     <td><a href="#">Kalkulator</a></td>
                     <td><a href="#" onclick="showPageBMI()">Kalkulator BMI</a></td>
-                    <td><a href="#">Konwerter walut</a></td>
+                    <td><a href="#" onclick="showPageConverter()">Konwerter walut</a></td>
                     <td><a href="#">Lotto</a></td>
                     <td><a href="#">Zgadnij liczbę</a></td>
                 </tr>
@@ -50,11 +50,55 @@
                     <h4 id="textBMI"></h4>
                 </div>
             </div>
+            <div class="content" id="pageConverter">
+                <h2>Konwerter walut</h2>
+                <div class="box">
+                    <div class="amountValue">
+                        Kwota:
+                        <br> <input type="number" id="inputAmountMoney">
+                    </div>
+                    <div class="fromCurrency">
+                        Mam:
+                        <br>
+                        <select id="selectFromValue">
+                            <option value="PLN">PLN - Złoty</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="USD">USD - Dolar amerykański</option>
+                            <option value="GBP">GBP - Funt Brytyjski</option>
+                            <option value="CHF">CHF - Frank szwajcarski</option>
+                            <option value="BTC">BTC - Bitcoin</option>
+                        </select>
+                    </div>
+                    <div class="sectionWithImg">
+                        <br><img src="convertButton.png" class="imgButton">
+                    </div>
+                    <div class="toCurrency">
+                        Chcę otrzymać:
+                        <br>
+                        <select id="selectToValue">
+                            <option value="PLN">PLN - Złoty</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="USD">USD - Dolar amerykański</option>
+                            <option value="GBP">GBP - Funt Brytyjski</option>
+                            <option value="CHF">CHF - Frank szwajcarski</option>
+                            <option value="BTC">BTC - Bitcoin</option>
+                        </select>
+                    </div>
+                    <div class="convertButtonSection">
+                        <br><input type="button" value="Przelicz" class="buttonToConvert" onclick="convertCurrency()">
+                    </div>
+                    <div class="resultView">
+                        <h2 id="result"></h2>
+                        <h4 id="exchangeRate"></h4>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <b>@2022 Michał Kuś</b>
         </div>
 
+        <script src="scriptsConverter.js"></script>
         <script src="scriptsBMI.js"></script>
     </body>
 </html>

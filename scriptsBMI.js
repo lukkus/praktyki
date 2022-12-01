@@ -61,7 +61,8 @@ function getDescriptionBMI(BMI) {
 
 function showPageBMI() {
     const element = document.getElementById("contentBMI");
-    element.style.display = "block"; 
+    element.style.display = "block";
+    hidePageConverter();
 }
 
 function showResultBMI() {
@@ -77,6 +78,11 @@ function resetCalculation() {
 
 function hideResult() {
     const element = document.getElementById("rightContentBMI");
+    element.style.display = "none";
+}
+
+function hidePageConverter() {
+    const element = document.getElementById("pageConverter");
     element.style.display = "none";
 }
 
