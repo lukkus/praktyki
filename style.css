@@ -148,12 +148,10 @@ a {
     text-align: left;
     float: left;
     background-color: #D6D6D6;
-    padding: 2%;
+    padding: 1%;
     padding-top: 5%;
     padding-bottom: 2%;
     height: 5vH;
-    width: auto;
-    width: 17.23%;
 }
 
 .sectionWithImg {
@@ -161,18 +159,15 @@ a {
 }
 
 .amountValue {
-    padding-left: 10%;
-}
-
-.convertButtonSection {
-    padding-right: 3%;
+    padding-left: 13%;
 }
 
 .resultView {
     background-color: #D6D6D6;
     clear: both;
     text-align: center;
-    width: 100%;
+    width: auto;
+    margin-left: 10%;
 }
 
 #exchangeRate {
@@ -180,6 +175,7 @@ a {
 }
 
 .box {
-    width: 50vw;
+    background-color: #D6D6D6;
     margin-left: 15%;
+    margin-right: 15%;
 }
