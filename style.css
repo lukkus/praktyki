@@ -144,7 +144,7 @@ a {
     padding-right: 15%;
 }
 
-.amountValue, .fromCurrency, .sectionWithImg, .toCurrency, .convertButtonSection {
+.amountValue, .fromCurrency, .sectionWithImg, .toCurrency{
     text-align: left;
     float: left;
     background-color: #D6D6D6;
