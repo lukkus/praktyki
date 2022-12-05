@@ -1,11 +1,11 @@
 document.getElementById("pageConverter").style.display = 'none';
 const result = document.getElementById("result");
 const exchangeRate = document.getElementById("exchangeRate");
+document.getElementById("inputAmountMoney").addEventListener("change", convertCurrency());
 
 function showPageConverter() {
     const element = document.getElementById("pageConverter");
     element.style.display = "block";
-    
 }
 
 function getFromCurrency() {
@@ -41,4 +41,5 @@ function convertCurrency() {
          exchangeRate.innerHTML = `1 ${fromCurrency} = ${selectedCurrencyRate} ${toCurrency}`;
       }
    }
+   setTimeout("convertCurrency()", 100);
 }
